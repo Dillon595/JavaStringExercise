@@ -24,22 +24,22 @@ public class Test {
 	public static void main(String[] args) {
 		System.out.println("请输入一个数字：（取绝对值）");
 		Scanner sc = new Scanner(System.in);
-		System.out.println(Math.abs(sc.nextInt()));
+		System.out.println(Math.abs(sc.nextInt()));			//Math.abs()为取绝对值
 		
 		System.out.println("请输入两个整数:(计算幂)");
-		System.out.println(Math.pow(sc.nextInt(), sc.nextInt()));
+		System.out.println(Math.pow(sc.nextInt(), sc.nextInt()));	//Math.pow(a,b)为取a的b次方
 		
 		System.out.println("请输入一个小数（取整）");
 		float f1 = sc.nextFloat();
-		System.out.println("向下取整"+Math.floor(f1));
+		System.out.println("向下取整"+Math.floor(f1));			
 		System.out.println("向上取整"+Math.ceil(f1));
 		System.out.println("四舍五入"+Math.round(f1));
 		
 		System.out.println(MyMath.haha(3.1456));
 		StringBuffer sb = new StringBuffer();
 		for(int x=0;x<6;x++) {			
-			int i =(int)Math.floor(Math.random()*10);
-			sb.append(i);
+			int i =(int)Math.floor(Math.random()*10);		//Math.random()*10为取0-9随机数
+			sb.append(i);						//将生成的随机数依次拼接到sb中
 		}
 		System.out.println(sb);
 		
