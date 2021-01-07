@@ -20,21 +20,21 @@ public class Person {
 		this.weight = weight;
 	}
 
-	public Person Max(Person p) {
-		if (p == this) {
-			return null;
-		}
+	public Person Max(Person p) {								//比较后返回大的对象
+		if (p == this) {								//若引用地址相同随便返回
+			return this;
+		}	//先判断年龄大小       再判断体重                    最后判断名字的长度
 		if (this.age > p.age || this.weight > p.weight || this.name.length() > p.name.length()) {
 			return this;
 		}
 		return p;
 	}
 
-	public boolean equals(Person p) {
-		if (p == this) {
+	public boolean equals(Person p) {				//重写的equals方法，用来比较两个Person类型的对象是否相等
+		if (p == this) {					//若引用地址相同则直接返回true
 			return true;
 		}
-		if (p.name.equals(this.name) && p.age == this.age && p.weight == this.weight) {
+		if (p.name.equals(this.name) && p.age == this.age && p.weight == this.weight) {		//判断两个对象的名字，年龄，体重是否都相同
 			return true;
 		} else {
 			return false;
@@ -42,7 +42,7 @@ public class Person {
 	}
 
 	@Override
-	public String toString() {
+	public String toString() {						//重写toString方法显示对象信息
 		return "Person [name=" + name + ", age=" + age + ", weight=" + weight + "]";
 	}
 
