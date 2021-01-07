@@ -14,48 +14,36 @@ package homework3;
 
 public class Test {
 	public static void main(String[] args) {
-		String s = new String("asdsa");
-		char c[] = s.toCharArray();		
-		
-		//第一种方法
+		String s = new String("asd");
+		char c[] = s.toCharArray();
+
+		// 第一种方法
 
 		System.out.println("************第一种***********");
 		boolean isEqual = false;
 		for (int i = 0; i <= c.length / 2; i++) {
 			if (c[i] != c[c.length - 1 - i]) {
-				System.out.println("不是回文");
+				System.out.println(s + "不是回文");
 				break;
 			}
 			isEqual = true;
 		}
-		if(isEqual) {
-			System.out.println("是回文");
+		if (isEqual) {
+			System.out.println(s + "是回文");
 		}
-		
-		//第二种方法		
+
+		// 第二种方法
 		System.out.println("************第二种***********");
 		StringBuffer sb = new StringBuffer(s);
-		String sb1 = new String(sb.toString());			//将StringBuffer转成String类型以便调用String类的equals()方法来比较是否相等
+		String sb1 = new String(sb.toString());				//将StringBuffer转成String类型以便调用String类的equals()方法来比较是否相等
 		String sb2 = new String(sb.reverse());
-		
-		if(sb1.equals(sb2)) {
-			System.out.println("是回文");
-		}else {
-			System.out.println("不是回文");
+
+		if (sb1.equals(sb2)) {
+			System.out.println(s + "是回文");
+		} else {
+			System.out.println(s + "不是回文");
 		}
-			
+
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
