@@ -32,11 +32,11 @@ public class Test {
 			System.out.println("是回文");
 		}
 		
-		//第二种方法
+		//第二种方法		
 		System.out.println("************第二种***********");
 		StringBuffer sb = new StringBuffer(s);
-		String sb1 = new String(sb.reverse());		//将StringBuffer转成String类型以便调用String类的equals()方法来比较是否相等
-		String sb2 = new String(sb.toString());	
+		String sb1 = new String(sb.toString());			//将StringBuffer转成String类型以便调用String类的equals()方法来比较是否相等
+		String sb2 = new String(sb.reverse());
 		
 		if(sb1.equals(sb2)) {
 			System.out.println("是回文");
