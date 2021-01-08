@@ -30,15 +30,19 @@ public class Person {
 		return p;
 	}
 
-	public boolean equals(Person p) {				//重写的equals方法，用来比较两个Person类型的对象是否相等
-		if (p == this) {					//若引用地址相同则直接返回true
-			return true;
+	public boolean equals(Object obj) {				//重写的equals方法，用来比较两个Person类型的对象是否相等
+		if(obj instanceof Person) {
+			if (obj == this) {					//若引用地址相同则直接返回true
+				return true;
+			}
+			Person p =(Person)obj;
+			if (p.name.equals(this.name) && p.age == this.age && p.weight == this.weight) {		//判断两个对象的名字，年龄，体重是否都相同
+				return true;
+			} else {
+				return false;
+			}
 		}
-		if (p.name.equals(this.name) && p.age == this.age && p.weight == this.weight) {		//判断两个对象的名字，年龄，体重是否都相同
-			return true;
-		} else {
-			return false;
-		}
+		return false;
 	}
 
 	@Override
